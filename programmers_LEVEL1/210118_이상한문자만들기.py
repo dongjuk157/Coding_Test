@@ -18,3 +18,7 @@ def solution(s): #_try hello world" ,"try hello world"
         answer+=' '
         print(answer)
     return answer[:-1]
+
+s='__try hello _world'
+print(solution(s))
+
