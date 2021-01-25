@@ -71,4 +71,6 @@
 | 2021-01-23 | SW Expert Academy | 1204. [S/W 문제해결 기본] 1일차 - 최빈수 구하기 |
 |            | SW Expert Academy | 1206. [S/W 문제해결 기본] 1일차 - View          |
 |            | SW Expert Academy | 1208. [S/W 문제해결 기본] 1일차 - Flatten       |
+| 2021-01-25 | 프로그래머스      | 완주하지 못한 선수                              |
+|            | 프로그래머스      | 예상 대진표                                     |
 
