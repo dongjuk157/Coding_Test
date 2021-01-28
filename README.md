@@ -90,8 +90,8 @@
 |                | Baekjoon          | 1402 아무래도이문제는A번난이도인것같다          |
 |                | Baekjoon          | 1003 피보나치 함수                              |
 |                | Baekjoon          | 10250 ACM 호텔                                  |
-|                | Baekjoon          | 2798 블랙잭()                                   |
-|                | Baekjoon          | 1075 나누기                                     |
-|                | Baekjoon          | 1475 방번호(아직 풀지 않음)                     |
+|                | Baekjoon          | 2798 블랙잭 (풀어 볼 것)                        |
+|                | Baekjoon          | 1075 나누기 (풀어 볼 것)                        |
+|                | Baekjoon          | 1475 방번호 (풀어 볼 것)                        |
 |                |                   |                                                 |
 
