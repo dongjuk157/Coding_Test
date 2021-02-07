@@ -99,7 +99,30 @@
 |                | Baekjoon          | 6단계 함수                                      |
 |                | Baekjoon          | 1339 단어 수학                                  |
 |                | Baekjoon          | 1316 그룹단어 체커                              |
-|                |                   |                                                 |
+| **2021-02-04** | Baekjoon          | 10845                                           |
+|                | Baekjoon          | 10998                                           |
+|                | Baekjoon          | 11399                                           |
+|                | Baekjoon          | 1236                                            |
+|                | Baekjoon          | 1252                                            |
+|                | Baekjoon          | 2004                                            |
+|                | Baekjoon          | 7568                                            |
+|                | Baekjoon          | 1292                                            |
+| 2021-02-07     | Baekjoon          | 1334                                            |
+|                | Baekjoon          | 1463                                            |
+|                | Baekjoon          | 2386                                            |
+|                | Baekjoon          | 2504                                            |
+|                | Baekjoon          | 3985                                            |
 |                |                   |                                                 |
 |                |                   |                                                 |
 
+폴더정리 아직 못했다...
+
+
+
+## 못 푼 문제, 재시도 할 문제
+
+| 일자 | 사이트 | 문제번호/제목 | 못 푼 이유          |
+| ---- | ------ | ------------- | ------------------- |
+|      | boj    | 11501         | 그리디 알고리즘     |
+|      |        |               | 스택                |
+|      |        |               | Dynamic Programming |
