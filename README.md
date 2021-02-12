@@ -99,6 +99,7 @@
 |                | Baekjoon          | 6단계 함수                                      |
 |                | Baekjoon          | 1339 단어 수학                                  |
 |                | Baekjoon          | 1316 그룹단어 체커                              |
+| 2021-02-01     | Baekjoon          | 7단계 문자열                                    |
 | **2021-02-04** | Baekjoon          | 10845                                           |
 |                | Baekjoon          | 10998                                           |
 |                | Baekjoon          | 11399                                           |
@@ -112,7 +113,8 @@
 |                | Baekjoon          | 2386                                            |
 |                | Baekjoon          | 2504                                            |
 |                | Baekjoon          | 3985                                            |
-|                |                   |                                                 |
+|                | Baekjoon          | 8단계 기본 수학 1                               |
+| 2021-02-12     | Baekjoon          | 9단계 기본 수학 2                               |
 |                |                   |                                                 |
 
 폴더정리 아직 못했다...
