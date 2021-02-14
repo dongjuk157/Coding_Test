@@ -1,22 +1,21 @@
-def concatenate(r1, r2):
-    return [''.join(x) for x in zip(r1, r2, r1)]
- 
-def star10(n):
-    if n == 1:
-        return ['*']
-    n //= 3
-    x = star10(n)
-    a = concatenate(x, x)
-    b = concatenate(x, [' '*n]*n)
- 
-    return a + b + a
- 
-print('\n'.join(star10(int(input()))))
+def star_fuc(star_list):
+    new_star_list = []
+    for i in range(3 * len(star_list)):
+        if i // len(star_list) == 1:
+            new_star_list.append(star_list[i % len(star_list)] + ' ' * len(star_list) + star_list[i % len(star_list)])
+        else:
+            new_star_list.append(star_list[i % len(star_list)] * 3)
 
+    return list(new_star_list)
 
-'''
-이거랑 생각은 똑같이 했는데
-구현하기가 너무 어려웠다...
-더 열심히 해야할듯...
+star = ['***', '* *', '***']
+n = int(input())
+num = 0
+while n != 3:
+    n = int(n / 3)
+    num = num + 1
 
-'''
+for i in range(num):
+    star = star_fuc(star)
+for i in star:
+    print(i)
