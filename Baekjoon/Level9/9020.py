@@ -1,7 +1,7 @@
 #import sys
 #input = sys.stdin.readline
 
-#에라토스테네스의 체로 소수를 먼저 구함
+# 에라토스테네스의 체로 소수를 먼저 구함
 max_number= 10000
 prime=[False,False,]+[True]*(max_number - 1)
 for i in range(2,int(max_number**0.5)+1):
@@ -19,5 +19,3 @@ for tc in range(1, t + 1):
             s,b = i, n-i
             break
     print(f"{s} {b}")
-
-
