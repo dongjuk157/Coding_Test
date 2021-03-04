@@ -45,3 +45,4 @@ else:
 print(danji)
 for num in sorted(num_of_apart):
     print(num)
+

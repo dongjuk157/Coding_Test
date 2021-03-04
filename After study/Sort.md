@@ -1,5 +1,42 @@
 # 정렬
 
+### Stable Sort
+
+동일한 값을 가지는 원소들의 순서가 정렬된 후에도 유지되는 정렬
+
+- 버블 정렬
+- 카운팅 정렬
+- 삽입 정렬
+- 병합 정렬
+
+
+
+### unstable sort
+
+동일한 값을 가지는 원소들의 순서가 정렬된 이후에도 유지되지 않는 정렬
+
+- 선택 정렬
+- 힙 정렬
+- 퀵 정렬
+- 쉘 정렬
+
+
+
+### In-place Algorithm
+
+원소들의 개수에 비해서 충분히 무시할 만한 저장 공간만을 더 사용하는 정렬 알고리즘
+
+- 버블 정렬, 선택 정렬, 삽입 정렬, 힙 정렬, 쉘 정렬
+- 퀵 정렬(정의에 따라서 Not in place sorting으로 볼수있음)
+
+**Not-in-place**
+
+- 카운팅, 기수(Radix), 합병, 버켓 정렬
+
+
+
+## 정렬 알고리즘
+
 ### 버블 정렬
 
 시간복잡도 O(n^2)
@@ -143,14 +180,11 @@ for i in range(len(cnt)):
 ```
 
 - 누적합 counting sort 는 stable 하게 만들어 줌. 
-  - stable: 정렬되기 전 동일한 값을 가지는 원소들의 순서가 정렬된 후에도 유지되도록 하는 것
   - radix sort 시 LSB 순서로 정렬할 경우 이전에 정렬한 값을 다음 정렬시에도 반영하여 정렬할 수 있음
 
 
 
 #### Radix sort
-
-[Wikipedia Radix sort Example](https://en.wikipedia.org/wiki/Radix_sort#Examples)
 
 기수 별로 비교 없이 수행하는 정렬 알고리즘
 
@@ -214,3 +248,38 @@ for i in range(len(arr)):
 
 ### 퀵 정렬
 
+분할 정복으로 수행하는 알고리즘
+
+```python
+def quicksort(arr, low, high):
+    if high <= low:
+        return arr
+
+    mid = partition(arr, low, high)
+    quicksort(arr, low, mid - 1)
+    quicksort(arr, mid, high)
+
+def partition(arr, low, high):
+    pivot = arr[(low + high) // 2]
+    while low <= high:
+        while arr[low] < pivot:
+            low += 1
+        while arr[high] > pivot:
+            high -= 1
+        if low <= high:
+            arr[low], arr[high] = arr[high], arr[low]
+            low, high = low + 1, high - 1
+    return low
+```
+
+
+
+
+
+---
+
+참고한 글
+
+[stable, inplace](https://velog.io/@cookncoding/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-%EA%B0%9C%EB%85%90-Stable-Sort-Inplace)
+
+[Wikipedia Radix sort Example](https://en.wikipedia.org/wiki/Radix_sort#Examples)
