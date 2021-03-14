@@ -30,4 +30,4 @@ def backtrack(index, number=n_list[0]):
             operator[3] += 1
 
 backtrack(0)
-print(max_val,min_val, sep='\n')
+print(max_val, min_val, sep='\n')

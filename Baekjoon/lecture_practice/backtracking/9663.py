@@ -14,11 +14,10 @@ def backtrack(index, arr=[]):
             if visited[i]: continue
             matrix[index][i] = 1
             if check_queen(index, i, arr): continue
-
             visited[i] = 1
             backtrack(index + 1, arr + [i])
             visited[i] = 0
-#            matrix[index][i] = 0
+            # matrix[index][i] = 0
 
 def check_queen(x, y, arr):
     for i in range(len(arr)):
