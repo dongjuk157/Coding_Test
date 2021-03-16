@@ -15,5 +15,3 @@ for tc in range(1, int(input()) + 1):
     min_total_price = min(total_price[12],prices[3])
     print("#{} {}".format(tc, min_total_price))
 
-
-
