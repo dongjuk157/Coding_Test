@@ -25,7 +25,8 @@ if stack:
 else:
     print(*result_list, sep='\n')
 
-
+# N=8 1~8
+#       stack   result
 # push, 1       []
 # push, 12      []
 # push, 123     []
