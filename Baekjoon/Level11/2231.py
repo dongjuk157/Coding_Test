@@ -2,16 +2,21 @@
 
 N=int(input())
 result = 0
-try:
-    for n in range(N-54,N):
-        temp = n
-        for ch in str(n):
-            temp += int(ch)
-        if temp == N:
-            result = n
-            break
-    else:
-        result = 0
-except: 
-    pass
-print(result)
+for i in range(max(1, N - 9 * len(str(N))), N):
+    ssj = i + sum(map(int, list(str(i))))
+    if ssj == N:
+        print(i)
+        break
+else:
+    print(0)
+
+
+
+# N = int(input())
+# for i in range(1,1000001):
+#     ssj = i + sum(map(int, list(str(i))))
+#     if ssj == N:
+#         print(i)
+#         break
+# else:
+#     print(0)
