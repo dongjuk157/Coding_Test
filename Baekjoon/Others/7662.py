@@ -1,35 +1,44 @@
-import sys; input = sys.stdin.readline
-from heapq import heappop, heappush
+import heapq
 
-for tc in range(int(input())):
-    k = int(input())
-    visit = [0] * 1000001
-    q_min, q_max = [], []
-    for ind in range(k):
-        c, i = input().split()
-        if c == 'I':
-            heappush(q_min, (int(i), ind))
-            heappush(q_max, (-int(i), ind))
-            visit[ind] = True
-        else:  # c == 'D'
-            if i == '-1':
-                while q_min and not visit[q_min[0][1]]:
-                    heappop(q_min)
-                if q_min:
-                    visit[q_min[0][1]] = False
-                    heappop(q_min)
-            else:  # i == '1'
-                while q_max and not visit[q_max[0][1]]:
-                    heappop(q_max)
-                if q_max:
-                    visit[q_max[0][1]] = False
-                    heappop(q_max)
-    while q_min and not visit[q_min[0][1]]:
-        heappop(q_min)
-    while q_max and not visit[q_max[0][1]]:
-        heappop(q_max)
+def sync(arr):
+    while arr and id[arr[0][1]] == 0:
+        heapq.heappop(arr)
 
-    if q_min and q_max:
-        print("{} {}".format(-q_max[0][0], q_min[0][0]))
+
+T = int(input())
+for test_case in range(T):
+    max_arr = []
+    min_arr = []
+    id = [0] * 1000000
+    K = int(input())
+    count = 0
+    for i in range(K):
+        S, num = input().split()
+
+        if S == "I":
+            heapq.heappush(max_arr, (-1 * int(num), i))
+            heapq.heappush(min_arr, (int(num), i))
+            id[i] = 1
+
+        else:
+
+            if num == "1":
+                sync(max_arr)
+                if max_arr:
+                    id[max_arr[0][1]] = 0
+                    heapq.heappop(max_arr)
+
+            elif num == "-1":
+                sync(min_arr)
+                if min_arr:
+                    id[min_arr[0][1]] = 0
+                    heapq.heappop(min_arr)
+
+    sync(max_arr)
+    sync(min_arr)
+
+    if len(max_arr) == 0:
+        print("EMPTY")
     else:
-        print("empty")
+        print(-1 * max_arr[0][0], end=" ")
+        print(min_arr[0][0])

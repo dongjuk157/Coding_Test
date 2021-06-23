@@ -23,6 +23,7 @@ for bit in range(1 << n):
             for j in range(n):
                 new_coin[i][j] = not new_coin[i][j]
     # 각 열에 대해 뒤집는경우와 뒤집지 않는 경우를 판단하여, T가 적은쪽으로 열을 뒤집음
+    print("bit", bit, new_coin)
     cmpcnt = 0
     for i in range(n):
         f, b = 0, 0
