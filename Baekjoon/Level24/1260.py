@@ -6,40 +6,31 @@ for _ in range(M):
     n1, n2 = map(int, input().split())
     linked_list[n1].append(n2)
     linked_list[n2].append(n1)
-for i in range(N):
+
+for i in range(N+1):
     linked_list[i].sort()
 
-def dfs(start):
-    s = [start]
-    visit = [0] * (N + 1)
-    while s:
-        cur = s[-1]
-        if not visit[cur]:
-            print(cur, end=' ')
-        visit[cur] = 1
-        break_chk = False
-        for i in range(len(linked_list[cur])):
-            if visit[linked_list[cur][i]]: continue
-            s.append(linked_list[cur][i])
-            break_chk = True
-            break
-        if break_chk == False:
-            s.pop()
-    print()
-
+def dfs(start, visit):
+    print(start, end=' ')
+    visit[start] = True
+    for adj in linked_list[start]:
+        if visit[adj]: continue
+        dfs(adj, visit)
 
 def bfs(start):
-    q = deque([start])
-    visit = [0] * (N + 1)
+    q = deque()
+    q.append(start)
+    visit = [False for _ in range(N + 1)]
     while q:
         cur = q.popleft()
+        if visit[cur]: continue
+        visit[cur] = True
         print(cur, end=' ')
-        visit[cur] = 1
-        for i in range(len(linked_list[cur])):
-            if visit[linked_list[cur][i]]: continue
-            visit[linked_list[cur][i]] = 1
-            q.append(linked_list[cur][i])
-    print()
+        for adj in linked_list[cur]:
+            q.append(adj)
 
-dfs(V)
+
+visit = [False for _ in range(N + 1)]
+dfs(V, visit)
+print()
 bfs(V)
