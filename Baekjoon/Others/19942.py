@@ -33,7 +33,7 @@ def main():
     answer = []
     backtrack(0, N, foods, goal)
     if answer:
-        answer.sort(key=lambda x:(x[0], ''.join(map(str, map(lambda y: y+1,x[1])))))
+        answer.sort(key=lambda x:(x[0], ''.join(map(str, map(lambda y: y+1, x[1])))))
 
         print('{}\n{}'.format(answer[0][0],' '.join(map(str, map(lambda y: y+1,answer[0][1])))))
     else:
