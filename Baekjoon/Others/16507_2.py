@@ -1,12 +1,17 @@
 import sys; input = sys.stdin.readline
+from itertools import accumulate
 
 def main():
     R, C, Q = map(int, input().split())
-    p = [list(map(int, input().split())) for _ in range(R)]
-    memo = [[0 for _ in range(C + 1)] for _ in range(R + 1)]
+    memo = [[0 for _ in range(C + 1)]]
+    for i in range(1, R + 1):
+        lst = [0]
+        lst.extend(map(int, input().split()))
+        memo.append(list(accumulate(lst)))
+
     for i in range(1, R + 1):
         for j in range(1, C + 1):
-            memo[i][j] = memo[i - 1][j] + memo[i][j - 1] - memo[i - 1][j - 1] + p[i - 1][j - 1]
+            memo[i][j] += memo[i - 1][j]
 
     ans = []
     for _ in range(Q):
